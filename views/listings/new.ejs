@@ -2,19 +2,26 @@
 
     <body>
         <h3>Add a new Place</h3>
-        <form action="/listings" method="post">
+        <form action="/listings" method="post" novalidate class="needs-validation">
             <div class="row">
                 <div class="col-8">
 
                     <br><br>
                     <div>
                         <label for="title" class="form-label">Title</label>
-                        <input type="text" name="listing[title]" placeholder="enter title" class="form-control">
+                        <input type="text" name="listing[title]" placeholder="enter title" required
+                            class="form-control">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
                     </div>
                     <br><br>
                     <div>
                         <label for="description" class="form-label">Description</label>
-                        <textarea name="listing[description]" id="description" class="form-control"></textarea>
+                        <textarea name="listing[description]" id="description" class="form-control" required></textarea>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
                     </div>
                     <br><br>
                     <div>
@@ -26,19 +33,31 @@
 
                         <div class="col-md-4">
                             <label for="price" class="form-label">Price</label>
-                            <input type="number" name="listing[price]" placeholder="Enter price" class="form-control">
+                            <input type="number" name="listing[price]" placeholder="Enter price" required
+                                class="form-control">
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
                         </div>
                         <br><br>
-                        
+
                         <div class="col-md-8">
                             <label for="country" class="form-label">Country</label>
-                            <input type="text" name="listing[country]" placeholder="Enter country" class="form-control">
+                            <input type="text" name="listing[country]" placeholder="Enter country" required
+                                class="form-control">
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
                         </div>
                     </div>
                     <div>
 
                         <label for="location" class="form-label">Location</label>
-                        <input type="text" name="listing[location]" placeholder="Enter location" class="form-control">
+                        <input type="text" name="listing[location]" placeholder="Enter location" required
+                            class="form-control">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
                     </div>
                     <br><br>
                     <button class="btn btn-dark add-btn">Add</button>
