@@ -68,6 +68,9 @@ app.delete("/listings/:id",async (req,res)=>{
     let deletedListing=await Listing.findByIdAndDelete(id);
     res.redirect(`/listings`);
 })
+app.use((req,res)=>{
+    res.send("no page found");
+})
 // app.get("/testListing",async (req,res)=>{
 //     let samplelisting=new Listing({
 //         title:"my villa",
